@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="UTF-8">
+        <meta name="description" content="Navigation">
+        <meta name="author" content="Alexandra Magdici">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="resources/main.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="banner">Free shipping on orders over $250</div>
+        </header>
+        <main>
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="assets/logo-boundary.png">
+                </div>
+                
+                <div class="side-menu">
+                    <div class="badge">
+                        <img src="assets/logo-vip.png">
+                    </div>
+
+                    <div class="menu-wrapper">
+                        <a class="menu-item selected" data-content="order-wrapper">Your orders</a>
+                        <a class="menu-item" data-content="status-wrapper">Reward status</a>
+                        <a class="menu-item" data-content="account-wrapper">Account settings</a>
+                        <a class="menu-item" data-content="payment-wrapper">Payment methods</a>
+                        <a class="menu-item">Sign out</a>
+                    </div>
+                </div>
+            </div>
+            <div class="active-section">
+                <div class="top-menu">
+                    
+                </div>
+                <div class="content order-wrapper"></div>
+                <div class="content status-wrapper hidden"></div>
+                <div class="content account-wrapper hidden"></div>
+                <div class="content payment-wrapper hidden"></div>
+            </div>
+        </main>
+
+        <script src="resources/main.js"></script>
+
+    </body>
+</html>
