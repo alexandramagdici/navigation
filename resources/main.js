@@ -15,6 +15,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
             menuItem.classList.add("selected");
 
+            const dataBadge = menuItem.dataset.badge;
+            const badgeImage = document.getElementsByClassName("badge");
+            for(let z = 0; z < badgeImage.length; z++) {
+                if(badgeImage[z].classList.contains('hidden')){
+                    continue;
+                } else {
+                    badgeImage[z].classList.add('hidden');
+                }
+            }
+            document.getElementsByClassName(dataBadge)[0].classList.remove('hidden');
+            console.log('dataBadge', dataBadge);
+
 
             const dataContent = menuItem.dataset.content;
             console.log('dataContent', dataContent)
@@ -29,4 +41,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
             document.getElementsByClassName(dataContent)[0].classList.remove("hidden");
         });
     }
+
+    const yourOrder = document.getElementById('yourOrder');
+    const orderDetails = document.getElementById('orderDetails');
+    const openOrderDetails = document.getElementById('openOrderDetails');
+    const closeOrderDetails = document.getElementById('closeOrderDetails');
+
+    openOrderDetails.addEventListener('click', function(){
+        orderDetails.classList.remove('hidden');
+        yourOrder.classList.add('hidden');
+    });
+
+    closeOrderDetails.addEventListener('click', function() {
+        orderDetails.classList.add('hidden');
+        yourOrder.classList.remove('hidden');
+    });
 });

@@ -6,6 +6,8 @@
         <meta name="author" content="Alexandra Magdici">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="resources/main.css">
     </head>
 
@@ -20,27 +22,249 @@
                 </div>
                 
                 <div class="side-menu">
-                    <div class="badge">
+                    <div class="badge badge-vip">
                         <img src="assets/logo-vip.png">
+                    </div>
+                    <div class="badge badge-gold hidden">
+                        <img src="assets/logo-gold.png">
+                    </div>
+                    <div class="badge badge-elite hidden">
+                        <img src="assets/logo-elite.png">
+                    </div>
+                    <div class="badge badge-member hidden">
+                        <img src="assets/logo-member.png">
                     </div>
 
                     <div class="menu-wrapper">
-                        <a class="menu-item selected" data-content="order-wrapper">Your orders</a>
-                        <a class="menu-item" data-content="status-wrapper">Reward status</a>
-                        <a class="menu-item" data-content="account-wrapper">Account settings</a>
-                        <a class="menu-item" data-content="payment-wrapper">Payment methods</a>
-                        <a class="menu-item">Sign out</a>
+                        <a class="menu-item selected" data-badge="badge-vip" data-content="order-wrapper">Your orders</a>
+                        <a class="menu-item" data-badge="badge-gold" data-content="status-wrapper">Reward status</a>
+                        <a class="menu-item" data-badge="badge-elite" data-content="account-wrapper">Account settings</a>
+                        <a class="menu-item" data-badge="badge-member" data-content="payment-wrapper">Payment methods</a>
+                        <a class="menu-item" data-badge="badge-member">Sign out</a>
                     </div>
                 </div>
             </div>
             <div class="active-section">
                 <div class="top-menu">
-                    
+                    <div>SHOP</div>
+                    <div class="top-menu-item">
+                        <img src="assets/icon-find.png">
+                    </div>
+                    <div class="top-menu-item">
+                        <img src="assets/icon-cart-2.png">
+                    </div>
+                    <div class="top-menu-item">
+                        <img src="assets/icon-exit-3.png">
+                    </div>
                 </div>
-                <div class="content order-wrapper"></div>
-                <div class="content status-wrapper hidden"></div>
-                <div class="content account-wrapper hidden"></div>
-                <div class="content payment-wrapper hidden"></div>
+                <div id="yourOrder" class="content order-wrapper">
+                    <div class="title">your orders</div>
+                    <div class="order">
+                        <div class="product-selected">
+                            <img src="assets/products/product.png">
+                        </div>
+                        <div class="details-wrapper">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>April 1, 2019</td>
+                                            <td id="openOrderDetails"><a>Order details</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bold-text">Processing</td>
+                                            <td>Cancel/Modify</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Order #</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bold-text">30004</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Order Total</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bold-text">$324.99</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="products-list">
+                                    <div>Also in this order</div>
+                                    <div class="other-products">
+                                        <div class="product">
+                                            <img src="assets/products/addition-1.png">
+                                        </div>
+                                        <div class="product">
+                                            <img src="assets/products/addition-3.png">
+                                        </div>
+                                        <div class="product">
+                                            <img src="assets/products/addition-4.png">
+                                        </div>
+                                        <div class="product">+ 3 more</div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="orderDetails" class="content order-details hidden">
+                    <div class="top-wrapper">
+                        <div id="closeOrderDetails" class="first-row">Your orders/Order #30002</div>
+                        <div class="second-row">    
+                            <div>Order details</div>
+                            <div>Order Cancelled</div>
+                        </div>
+                    </div>
+                        <div class="order-information">
+                            <div class="shipping-wrapper">
+                                <div>Biling</div>
+                                <div>Shipping</div>
+                            </div>
+                        
+                            <div class="order-details-wrapper">
+                                <div class="shipping-info">
+                                    <div class="shipping-adress-col">  
+                                        <div>
+                                            <div>Rally Interactive</div>
+                                            <div>244 W 300 N</div>
+                                            <div>Salt Lake City, Utah 84103</div>
+                                            <div>United States</div>
+                                            <div>(801) 643-3595</div>
+                                        </div>
+                                    
+                                        <div>
+                                            <div>Rally Interactive</div>
+                                            <div>244 W 300 N</div>
+                                            <div>Salt Lake City, Utah 84103</div>
+                                            <div>United States</div>
+                                            <div>(801) 643-3595</div>
+                                        </div>  
+                                    </div>
+
+                                    <div class="payment-col">
+                                        <div>
+                                            <div>Payment Status</div>
+                                            <div>Refunded</div>
+                                        </div>
+                                        <div>
+                                            <div>Payment Status</div>
+                                            <div>Unfulfilled</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                
+
+                <div class="content status-wrapper hidden">
+                    <div class="title">reward status</div>
+                    <div class="status-information">
+                        <div class="sections-wrapper">
+                            <div>Activity</div>
+                            <div>Benefits</div>
+                        </div>
+                    
+                        <div class="information-wrapper">
+                            <div class="activity-info">
+                                <div class="first-col">  
+                                    <div>
+                                        <div class="bold-text">VIP</div>
+                                        <div>Current status</div>
+                                    </div>
+                                    <div>
+                                        <div class="bold-text">$ 648.79</div>
+                                        <div>Lifetime spend</div>
+                                    </div>
+                                    <div>
+                                        <div class="bold-text">003</div>
+                                        <div>Orders</div>
+                                    </div>  
+                                </div>
+
+                                <div class="second-col">
+                                    <div>
+                                        <div class="bold-text">GOLD</div>
+                                        <div>Next tier</div>
+                                    </div>
+                                    <div>
+                                        <div class="bold-text">$ 321.60</div>
+                                        <div>To gold status</div>
+                                    </div>
+                                    <div>
+                                        <div class="bold-text">007</div>
+                                        <div>Referrals</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="benefits-info">
+                                <div>
+                                    <img src="assets/icon-recurrent.png">
+                                </div>
+
+                                <div>
+                                    <img src="assets/icon-savings.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="content account-wrapper hidden">
+                    <div class="title">Account settings</div>
+                    <div class="settings-wrapper">
+                        <h1>Account</h1>
+                        <form>
+                            <div>
+                                <input required type="text" id="name" name="name" placeholder="Ben Cline">
+                                <input required type="number" id="number" name="number" placeholder="+1 809 9304 321">
+                            </div>
+                            <div>
+                                <input required type="email" id="email" name="email" placeholder="ben@rallyinteractive.com">
+                                <input required type="password" id="password" name="password" placeholder="Password">
+                            </div>
+                            <div>
+                                <input type="submit" value="Save changes">
+                            </div>
+                        </form>
+                        <div class="adresses">
+                            <h1>Adresses</h1>
+                            <div class="adresses-wrapper">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content payment-wrapper hidden">
+                    <div class="title">payment methods</div>
+                    <div class="card-wrapper">
+                        <div>
+                            <div class="card">
+                                <img src="assets/card-1.png">
+                            </div>
+                            <div class="card">
+                                <img src="assets/card-2.png">
+                            </div>
+                        </div>
+                       
+                        <div>
+                            <div class="card">
+                                <img src="assets/card-3.png">
+                            </div>
+                            <div class="card add">
+                                <div class="icon">
+                                    <img src="assets/icon-plus.png">
+                                </div>
+                                <div>ADD CARD</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
