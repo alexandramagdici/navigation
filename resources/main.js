@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
     }
 
+    // te sfatuiesc sa ai declatariile la inceputul fisier-ului, mult mai usor de citit
     const yourOrder = document.getElementById('yourOrder');
     const orderDetails = document.getElementById('orderDetails');
     const openOrderDetails = document.getElementById('openOrderDetails');
